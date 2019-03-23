@@ -88,6 +88,14 @@ onto an VC707 FPGA board.
 To execute these targets, you can run the following commands:
 
 ```sh
+$ export RISCV=/path/to/gcc-embedded-toolchain 
+#If gcc is installed to /home/riscv/riscv64-elf-tc/bin/riscv64-unknown-elf-gcc
+#then it will be export RISCV=/home/riscv/riscv64-elf-tc
+#Do not include /bin at the end.
+$ export PATH=${PATH}:/path/to/Xilinx/Vivado/2016.4/bin
+#If vivado is installed to /tools/Xilinx/Vivado/2016.4/bin
+#then it will be export PATH=${PATH}:/tools/Xilinx/Vivado/2016.4/bin
+#Here it must have /bin at the end.
 $ make -f Makefile.vc707-u500devkit verilog
 $ make -f Makefile.vc707-u500devkit mcs
 ```
