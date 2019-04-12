@@ -21,4 +21,9 @@ VSRCS := \
 	$(BUILD_DIR)/$(CONFIG_PROJECT).$(CONFIG).rom.v \
 	$(BUILD_DIR)/$(CONFIG_PROJECT).$(CONFIG).v
 
+.PHONY: nopcie
+nopcie:
+	sed 's/^\s*val pcie      = Overlay/  \/\/val pcie      = Overlay/' -i \
+		fpga-shells/src/main/scala/shell/xilinx/VC707NewShell.scala
+
 include common.mk
