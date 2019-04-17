@@ -110,6 +110,11 @@ To execute these targets, you can run the following commands:
 $ make -f Makefile.vc707-u500devkit verilog
 $ make -f Makefile.vc707-u500devkit mcs
 ```
+If you do not have PCI Express Gen1/2/3 FMC Module run following commands:
+```sh
+$ make MODEL=VC707BaseShell -f Makefile.vc707-u500devkit verilog
+$ make MODEL=VC707BaseShell -f Makefile.vc707-u500devkit mcs
+```
 
 Note: This flow requires Vivado 2016.4. Newer versions are known to fail.
 
@@ -123,4 +128,4 @@ card slot on the VC707 board.
 ### Linux boot Image
 
 The bootable Linux image for vc707 is able to build from the link
-[SD boot image](https://github.com/sifive/freedom-e-sdk).
+[SD boot image](https://github.com/sifive/freedom-u-sdk).
