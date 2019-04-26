@@ -1,6 +1,6 @@
 [submodule "rocket-chip"]
 	path = rocket-chip
-	url = https://github.com/ucb-bar/rocket-chip.git
+	url = https://github.com/mcd500/rocket-chip.git
 [submodule "sifive-blocks"]
 	path = sifive-blocks
 	url = https://github.com/sifive/sifive-blocks.git
@@ -10,3 +10,6 @@
 [submodule "nvidia-dla-blocks"]
 	path = nvidia-dla-blocks
 	url = https://github.com/sifive/nvidia-dla-blocks.git
+[submodule "bootrom/freedom-u540-c000-bootloader"]
+	path = bootrom/freedom-u540-c000-bootloader
+	url = https://github.com/mcd500/freedom-u540-c000-bootloader.git

@@ -7,7 +7,8 @@ MODEL := VC707PCIeShell
 export CONFIG_PROJECT := sifive.freedom.unleashed
 export CONFIG := DevKitU500FPGADesign_WithDevKit50MHz
 export BOARD := vc707
-export BOOTROM_DIR := $(base_dir)/bootrom/sdboot
+#export BOOTROM_DIR := $(base_dir)/bootrom/sdboot
+export BOOTROM_DIR := $(base_dir)/bootrom/freedom-u540-c000-bootloader
 
 rocketchip_dir := $(base_dir)/rocket-chip
 sifiveblocks_dir := $(base_dir)/sifive-blocks

@@ -393,9 +393,9 @@
 			reg = <0x0 0x1000 0x0 0x1000>;
 			reg-names = "mem";
 		};
-		L26: rom@10000 {
+		L26: rom@78000000 {
 			compatible = "sifive,maskrom0";
-			reg = <0x0 0x10000 0x0 0x8000>;
+			reg = <0x0 0x78000000 0x0 0x8000>;
 			reg-names = "mem";
 		};
 		L25: rom@a000000 {

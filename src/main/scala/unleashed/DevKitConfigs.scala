@@ -24,13 +24,13 @@ class FreedomU500Config extends Config(
 // Freedom U500 Dev Kit Peripherals
 class U500DevKitPeripherals extends Config((site, here, up) => {
   case PeripheryUARTKey => List(
-    UARTParams(address = BigInt(0x64000000L)))
+    UARTParams(address = BigInt(0x10010000L)))
   case PeripherySPIKey => List(
-    SPIParams(rAddress = BigInt(0x64001000L)))
+    SPIParams(rAddress = BigInt(0x10040000L)))
   case PeripheryGPIOKey => List(
-    GPIOParams(address = BigInt(0x64002000L), width = 4))
+    GPIOParams(address = BigInt(0x10060000L), width = 4))
   case PeripheryMaskROMKey => List(
-    MaskROMParams(address = 0x10000, name = "BootROM"))
+    MaskROMParams(address = 0x78000000, name = "BootROM"))
 })
 
 // Freedom U500 Dev Kit
@@ -40,7 +40,7 @@ class U500DevKitConfig extends Config(
   new FreedomU500Config().alter((site,here,up) => {
     case SystemBusKey => up(SystemBusKey).copy(
       errorDevice = Some(DevNullParams(
-        Seq(AddressSet(0x3000, 0xfff)),
+        Seq(AddressSet(0x18000000, 0xfff)),
         maxAtomic=site(XLen)/8,
         maxTransfer=128,
         region = RegionType.TRACKED)))
