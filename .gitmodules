@@ -13,3 +13,6 @@
 [submodule "bootrom/freedom-u540-c000-bootloader"]
 	path = bootrom/freedom-u540-c000-bootloader
 	url = https://github.com/mcd500/freedom-u540-c000-bootloader.git
+[submodule "bootrom/keystone-freedom-u540-c000-bootloader"]
+	path = bootrom/keystone-freedom-u540-c000-bootloader
+	url = https://github.com/mcd500/freedom.git
