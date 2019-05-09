@@ -22,8 +22,8 @@ $(dtb): $(dts)
 dtb: $(dtb)
 
 elf := $(BUILD_DIR)/sdboot.elf
-$(elf): $(dtb) head.S kprintf.c sd.c $(clk)
-	$(CC) $(CFLAGS) -include $(clk) -DDEVICE_TREE='"$(dtb)"' $(LFLAGS) -o $@ head.S sd.c kprintf.c
+$(elf): $(dtb) head.S kprintf.c gpt.c sd.c $(clk)
+	$(CC) $(CFLAGS) -include $(clk) -DDEVICE_TREE='"$(dtb)"' $(LFLAGS) -o $@ head.S kprintf.c gpt.c sd.c
 
 .PHONY: elf
 elf: $(elf)

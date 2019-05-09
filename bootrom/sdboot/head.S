@@ -13,7 +13,7 @@ _prog_start:
   smp_resume(s1, s2)
   csrr a0, mhartid
   la a1, dtb
-  li s1, PAYLOAD_DEST
+  li s1, (PAYLOAD_DEST + 0x10000000)
   jr s1
 
   .section .rodata
